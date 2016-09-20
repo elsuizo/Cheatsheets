@@ -2,8 +2,8 @@ SHELL := /bin/bash
 
 LATEX=latex
 #pdf latex options
-#PDFLATEX=pdflatex
-PDFLATEX=xelatex
+PDFLATEX=pdflatex
+#PDFLATEX=xelatex
 DVI=dvips
 PS=ps2pdf
 FILE_NAME=algebra
@@ -13,7 +13,7 @@ TEX_FILE=$(FILE_NAME).tex
 DVI_FILE=$(FILE_NAME).dvi
 PS_FILE=$(FILE_NAME).ps
 
-.PHONY: all pdf clean
+.PHONY: all pdf clean pd
 
 all : pdf
 
