@@ -12,16 +12,18 @@
 \usepackage[top=0mm,bottom=1mm,left=0mm,right=1mm]{geometry}
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{microtype}
-
+\usepackage{amsthm}
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
 \let\bar\overline
 
-\definecolor{myblue}{cmyk}{1,.72,0,.38}
+%\definecolor{myblue}{cmyk}{1,.72,0,.38}
+\definecolor{mycolor}{cmyk}{0,1,.37,.38}
 
 \def\firstcircle{(0,0) circle (1.5cm)}
 \def\secondcircle{(0:2cm) circle (1.5cm)}
 
-\colorlet{circle edge}{myblue}
-\colorlet{circle area}{myblue!5}
+\colorlet{circle edge}{mycolor}
+\colorlet{circle area}{mycolor!5}
 
 \tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
     outline/.style={draw=circle edge, thick}}
@@ -29,31 +31,37 @@
 \pgfdeclarelayer{background}
 \pgfsetlayers{background,main}
 
-\everymath\expandafter{\the\everymath \color{myblue}}
-\everydisplay\expandafter{\the\everydisplay \color{myblue}}
+ \everymath\expandafter{\the\everymath \color{mycolor}}
+% \everydisplay\expandafter{\the\everydisplay \color{mycolor}}
 
 \renewcommand{\baselinestretch}{.8}
 \pagestyle{empty}
 
 \global\mdfdefinestyle{header}{%
 linecolor=gray,linewidth=1pt,%
-leftmargin=0mm,rightmargin=0mm,skipbelow=0mm,skipabove=0mm,
+leftmargin=0.3mm,rightmargin=0mm,skipbelow=0mm,skipabove=0mm,
 }
 
 \newcommand{\header}{
 \begin{mdframed}[style=header]
 \footnotesize
 \sffamily
-Ayuda Memoria\\
-by~elsuizo~,~page~\thepage~of~2\\
+\includegraphics[width=.23\textwidth]{Images/cc_licence.png}
+Ayuda Memoria
+by~elsuizo
 \end{mdframed}
 }
+
+\newtheorem{coro}{Corolario}[section]
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{defi}{Definición}[section]
+\newtheorem{ejemplo}{Ejemplo}[section]
 
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
                                 {.2ex}%
                                 {.2ex}%x
-                                {\color{myblue}\sffamily\small\bfseries}}
+                                {\color{mycolor}\sffamily\small\bfseries}}
 \renewcommand{\subsection}{\@startsection{subsection}{1}{0mm}%
                                 {.2ex}%
                                 {.2ex}%x
@@ -177,8 +185,11 @@ by~elsuizo~,~page~\thepage~of~2\\
 \setlength{\parindent}{0pt}
 
 \begin{document}
+%\small
+
 \scriptsize
-\begin{multicols*}{5}
-\input{./Sections/section1}
+\begin{multicols*}{3}
+\input{./Sections/complex_numbers}
+\input{./Sections/polynomials}
 \end{multicols*}
 \end{document}
