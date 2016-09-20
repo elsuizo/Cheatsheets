@@ -1,0 +1,58 @@
+%--------------------------------------------------------------------------
+% @file polynomials.tex
+%
+% @date 09/20/16 16:22:57
+% @author Martin Noblia
+% @email martin.noblia@openmailbox.org
+%
+% @brief
+% Breve resumen de polinomios
+% @detail
+%
+% Licence:
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or (at
+% your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful, but
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+% General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+%
+%---------------------------------------------------------------------------
+\section{Polinomios}
+\begin{defi}{Polinomios:}
+   Un polinomio en la variable $x$ es de la forma $a_0 + a_1 x + a_2 x^2 + a_3 x^3 + ... + a_n x^n$
+\end{defi}
+\begin{defi}
+   Dos polinomios son iguales si los coeficientes de igual grado son iguales: Sean $p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + ... + a_n x^n$ y 
+   $q(x) = b_0 + b_1 x + b_2 x^2 + b_3 x^3 + ... + b_n x^n$ entonces decimos que $p(x) = q(x)$ si y solo si:
+   \begin{align}
+      a_0 &= b_0\\
+      a_1 &= b_1\\
+      a_2 &= b_2\\
+      a_3 &= b_3\\
+      .\\
+      .\\
+      .\\
+      a_n &= b_n
+   \end{align}
+\end{defi}
+
+\begin{teo}{Teorema del resto:}
+   Al dividir un polinomio $p(x)$ por $x-a$ se obtiene como resto $p(a)$
+\end{teo}
+\begin{teo}
+   Un polinomio de grado $n$ no puede tener mas de $n$ raices distintas
+\end{teo}
+
+\begin{teo}{Principio de identidad de Polinomios:}
+   Si dos polinomios de grado $\leq n$ valen lo mismo en $n+1$ puntos distintos entonces son iguales
+\end{teo}
+ \begin{teo}{Criterio de Gauss:}
+    Sea $\frac{p}{q}$ una raiz racional del polinomio con coeficientes enteros: $z(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + ... + a_n x^n$
+    Si $a_0 a_n \neq 0$ y $p$, $q$ son coprimos entonces $p|a_0$ y $q|a_n$
+ \end{teo}
