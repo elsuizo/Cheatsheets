@@ -25,11 +25,11 @@
 %---------------------------------------------------------------------------
 \section{Polinomios}
 \begin{defi}{Polinomios:}
-   Un polinomio en la variable $x$ es de la forma $a_0 + a_1 x + a_2 x^2 + a_3 x^3 + ... + a_n x^n$
+   Un polinomio en la variable $x$ es de la forma $a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n$
 \end{defi}
 \begin{defi}
-   Dos polinomios son iguales si los coeficientes de igual grado son iguales: Sean $p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + ... + a_n x^n$ y 
-   $q(x) = b_0 + b_1 x + b_2 x^2 + b_3 x^3 + ... + b_n x^n$ entonces decimos que $p(x) = q(x)$ si y solo si:
+   Dos polinomios son iguales si los coeficientes de igual grado son iguales: Sean $p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n$ y 
+   $q(x) = b_0 + b_1 x + b_2 x^2 + b_3 x^3 + \cdots + b_n x^n$ entonces decimos que $p(x) = q(x)$ si y solo si:
    \begin{align}
       a_0 &= b_0\\
       a_1 &= b_1\\
@@ -52,7 +52,38 @@
 \begin{teo}{Principio de identidad de Polinomios:}
    Si dos polinomios de grado $\leq n$ valen lo mismo en $n+1$ puntos distintos entonces son iguales
 \end{teo}
- \begin{teo}{Criterio de Gauss:}
-    Sea $\frac{p}{q}$ una raiz racional del polinomio con coeficientes enteros: $z(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + ... + a_n x^n$
-    Si $a_0 a_n \neq 0$ y $p$, $q$ son coprimos entonces $p|a_0$ y $q|a_n$
- \end{teo}
+\begin{teo}{Criterio de Gauss:}
+   Sea $\frac{p}{q}$ una raiz racional del polinomio con coeficientes enteros: $z(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n$
+   Si $a_0 a_n \neq 0$ y $p$, $q$ son coprimos entonces $p|a_0$ y $q|a_n$
+\end{teo}
+
+\begin{ejemplo}
+   Sea el polinomio: $p(x)=x^{3}+x^{2}-4x-4$ vemos que como $a_{3}=1$ las unicas posibles raices son enteras: $\pm 1, \pm 2, \pm 4$. Hemos acotado el problema
+   a solo 6 posibles raices!!!. Si evaluamos cada una de las $6$ raices veremos que $-1, 2, -2$ son las que satisfacen, y como son tres y el polinomio es de
+   grado $3$ entonces son todas las raices que buscabamos.
+\end{ejemplo}
+
+\begin{defi}
+   Se dice que una raiz $a$ de un polinomio $p(x)$ tiene multiplicidad $r$ si $(x-a)$ es factor de $p(x)$ pero $(x-a)^{r-1}$ no lo es. Dicho de manera equivalente:
+
+   $p(x)=(x-a)^{r}q(x)$  y $a$ no es raiz de $q(x)$
+\end{defi}
+
+\begin{teo}
+   Si $z=\alpha +j\beta$ es una raiz compleja de un polinomio con coeficientes reales $p(x)$ su conjugada $\bar{z}=\alpha-j\beta$ tambien es raiz de $p(x)$
+\end{teo}
+
+\begin{teo}{Teorema fundamental del Algebra (Gauss):}
+   Todo polinomio real o complejo no constante tiene al menos una raiz entre los numeros complejos
+\end{teo}
+
+\begin{coro}
+   Un polinomio $p(x)$ de grado $n>0$ con coeficientes complejos tiene exactamente $n$ raices.
+\end{coro}
+
+\begin{defi}
+   Sea $p(x)=a_0 + a_1 x + x^{2}$ de grado $2$ monico, es decir, el coeficiente principal es $1$. Si $\alpha$ y $\beta$ son sus raices se tiene:
+   \begin{equation}
+      p(x)=(x-\alpha)(x-\beta)=x^{2}-(\alpha+\beta)x+\alpha \beta
+   \end{equation}
+\end{defi}
